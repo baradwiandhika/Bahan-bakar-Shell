@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pembelian Bahan Bakar</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+            background-size: cover;
+
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .container {
+            width: 70%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-size: cover;
+            color: black;
+        }
+
+        h1 {
+            margin-bottom: 50px;
+            color: orange;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select,
+        input[type="number"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 70px;
+            background-color: #00CCDD;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        button:hover {
+            background-color: #4F75FF;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+
+        }
+
+        .form-group label {
+            width: 30%;
+            text-align: right;
+        }
+
+        .form-group select,
+        .form-group input[type="number"] {
+            width: 65%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>Form Pembelian Bahan Bakar</h2>
+
+        <form action="bb.php" method="POST">
+            <div class="form-group">
+                <label for="jenis">Pilih Jenis Bahan Bakar:</label>
+                <select id="jenis" name="jenis">
+                    <option value="Super">Shell Super</option>
+                    <option value="V-Power">Shell V-Power</option>
+                    <option value="V-Power Diesel">Shell V-Power Diesel</option>
+                    <option value="V-Power Nitro">Shell V-Power Nitro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="jumlah">Jumlah Liter:</label>
+                <input type="number" id="jumlah" name="jumlah" min="1" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
